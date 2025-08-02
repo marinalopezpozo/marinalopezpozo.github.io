@@ -56,41 +56,6 @@
     p {
       line-height: 1.5;
     }
-
-    .form-group {
-      margin-bottom: 15px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background-color: #006600;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #004d00;
-    }
-
-    .info {
-      margin-bottom: 30px;
-    }
   </style>
 </head>
 <body>
@@ -107,33 +72,23 @@
 </div>
 
 <section>
-  <div class="info">
-    <h2>Dirección institucional</h2>
-    <p>
-      Department of Ecology & Evolutionary Biology<br />
-      UCB 344; Ramaley N122<br />
-      University of Colorado<br />
-      Boulder, CO 80309-0334<br />
-      USA
-    </p>
-    <h2>Correo electrónico</h2>
-    <p><a href="mailto:marina.lopezpozo@colorado.edu">marina.lopezpozo@colorado.edu</a></p>
-  </div>
+  <h2>Dirección institucional</h2>
+  <p>
+    Department of Ecology & Evolutionary Biology<br />
+    UCB 344; Ramaley N122<br />
+    University of Colorado<br />
+    Boulder, CO 80309-0334<br />
+    USA
+  </p>
 
-  <h2>Formulario de contacto</h2>
-  <form action="mailto:marina.lopez@example.com" method="POST" enctype="text/plain">
-    <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="Nombre" required />
-    </div>
-    <div class="form-group">
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="Email" required />
-    </div>
-    <div class="form-group">
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="Mensaje" rows="6" required></textarea>
-    </div>
+  <h2>Correo electrónico</h2>
+  <p><a href="mailto:marina.lopezpozo@colorado.edu">marina.lopezpozo@colorado.edu</a></p>
+
+  <h2>Formulario de contacto (depende del cliente de correo local)</h2>
+  <form action="mailto:marina.lopezpozo@colorado.edu" method="POST" enctype="text/plain">
+    <label>Nombre:<br /><input type="text" name="Nombre" required></label><br /><br />
+    <label>Email:<br /><input type="email" name="Email" required></label><br /><br />
+    <label>Mensaje:<br /><textarea name="Mensaje" rows="6" required></textarea></label><br /><br />
     <button type="submit">Enviar</button>
   </form>
 </section>
