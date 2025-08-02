@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CV - Marina López Pozo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    nav {
+      background-color: #006699;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .lang-switch {
+      text-align: right;
+      margin: 10px 0;
+    }
+    .lang-switch button {
+      font-weight: bold;
+      padding: 0.3em 0.7em;
+      border: none;
+      border-radius: 4px;
+      background-color: #006600;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    h1 {
+      color: #006699;
+    }
+  </style>
+  <script>
+    function toggleLang(lang) {
+      document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
+      document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="toggleLang('es')">ES</button>
+    <button onclick="toggleLang('en')">EN</button>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio / Home</a>
+    <a href="Publicaciones.html">Publicaciones / Publications</a>
+    <a href="Exploration.html">Viajes / Travels</a>
+    <a href="Proyectos.html">Proyectos / Projects</a>
+    <a href="CV.html">CV</a>
+    <a href="Contacto.html">Contacto / Contact</a>
+  </nav>
+
+  <div id="es">
+    <h1>Currículum</h1>
+    <p>Puedes descargar una versión completa de mi CV aquí:</p>
+    <p><a href="CV_MarinaLopezPozo.pdf" target="_blank">Descargar CV en PDF</a></p>
+  </div>
+
+  <div id="en" style="display:none;">
+    <h1>Curriculum Vitae</h1>
+    <p>You can download a full version of my CV here:</p>
+    <p><a href="CV_MarinaLopezPozo.pdf" target="_blank">Download CV in PDF</a></p>
+  </div>
+</body>
+</html>
