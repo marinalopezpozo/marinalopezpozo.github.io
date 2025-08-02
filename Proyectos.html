@@ -1,123 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <title>Proyectos - Marina López-Pozo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #004466;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.5em;
-            flex-grow: 1;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            font-weight: bold;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            max-width: 800px;
-            margin-top: 30px;
-        }
-        li {
-            background: white;
-            margin-bottom: 15px;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
-        }
-        .project-title {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #004466;
-            margin-bottom: 5px;
-        }
-        .project-details {
-            font-size: 0.95em;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Viajes / Travels - Marina López-Pozo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f7f9fc;
+      color: #222;
+    }
+
+    .banner {
+      background-color: #09e393;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5em;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #0984e3;
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+    }
+
+    /* Estilo para contenedor con imagen y texto alineados */
+    .image-text-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .image-text-container img {
+      max-width: 150px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* Responsive para pantallas pequeñas */
+    @media (max-width: 600px) {
+      .image-text-container {
+        flex-direction: column;
+      }
+      .image-text-container img {
+        max-width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Ocultar idiomas según selección (si tienes funcionalidad multilenguaje) */
+    .lang-en {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Proyectos de Investigación</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="Publicaciones.html">Publicaciones</a>
-            <a href="Exploration.html">Viajes</a>
-        </nav>
-    </header>
 
-    <ul>
-        <li>
-            <div class="project-title">The Lunar Effects on Agricultural Flora (LEAF)</div>
-            <div class="project-details">
-                Deployed Instruments for Artemis III Mission. NASA. 2024-2027.<br/>
-                Postdoctoral Researcher
-            </div>
-        </li>
-        <li>
-            <div class="project-title">Co-optimization of duckweed biomass, nutritional quality, & input use efficiency</div>
-            <div class="project-details">
-                NASA-TRISH. 2019-2021.<br/>
-                Postdoctoral Researcher
-            </div>
-        </li>
-        <li>
-            <div class="project-title">Influence of rhizosphere microbes on duckweed transcriptome under elevated CO2</div>
-            <div class="project-details">
-                Joint Genome Institute (USA, Department of Energy). 2021.<br/>
-                Principal Investigator
-            </div>
-        </li>
-        <li>
-            <div class="project-title">Physiological basis of Outlier model systems in the Photosynthesis-multitolerance tradE off: learning from high Yields in extreme Environments (POPEYE)</div>
-            <div class="project-details">
-                Spanish Government. 2023-2027.<br/>
-                Postdoctoral Researcher
-            </div>
-        </li>
-        <li>
-            <div class="project-title">Ecophysiological and evolutionary roots of stress tolerance in plants (EREMITA)</div>
-            <div class="project-details">
-                Spanish Government. 2019-2021.<br/>
-                Postdoctoral Researcher
-            </div>
-        </li>
-        <li>
-            <div class="project-title">Uncovering the volatile nature of bryophytes (VolNaBry)</div>
-            <div class="project-details">
-                Asociación Española de Ecología Terrestre. 2018-2019.<br/>
-                Predoctoral Researcher
-            </div>
-        </li>
-        <li>
-            <div class="project-title">Mechanistic bases for compensation between photosynthesis and stress tolerance: filling in knowledge gaps for evolutionary biology and plant biotechnology (TOPSTEP)</div>
-            <div class="project-details">
-                Spanish Government. 2015-2018.<br/>
-                Predoctoral Researcher
-            </div>
-        </li>
-    </ul>
+  <div class="banner">
+    Viajes / Travels
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Publicaciones.html">Publicaciones</a>
+      <a href="Proyectos.html">Proyectos</a>
+      <a href="Viajes.html">Viajes</a>
+      <a href="CV.html">CV</a>
+    </nav>
+  </div>
+
+  <!-- Contenido en Español -->
+  <div class="lang-es">
+    <section>
+      <h2>Antártida</h2>
+      <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
+    </section>
+
+    <section>
+      <h2>Royal Botanic Gardens, Kew (Reino Unido)</h2>
+      <div class="image-text-container">
+        <img src="ruta/a/tu/imagen-kew.jpg" alt="Royal Botanic Gardens, Kew" />
+        <p>
+          Durante 2017, 2018 y 2019 realicé estancias de investigación junto al Dr. Daniel Ballesteros y la Dra. Charlotte Seal. Estudiamos la tolerancia a la desecación a largo plazo en esporas clorofílicas de helecho utilizando técnicas como DMTA, análisis de glutatión por HPLC, detección de especies reactivas de oxígeno, cuantificación de pigmentos fotosintéticos, ensayos de germinación y fluorescencia de la clorofila.
+          <br /><br />
+          Este trabajo dio lugar a una publicación científica que aporta nuevas perspectivas sobre los mecanismos fisiológicos que permiten la viabilidad de esporas en condiciones extremas de desecación a lo largo del tiempo.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Universidad de Montevideo, Uruguay</h2>
+      <p>Analicé proteínas LEA, enfocándome en su papel en la tolerancia al estrés en plantas.</p>
+    </section>
+
+    <section>
+      <h2>Jardín Botánico de Edimburgo, Reino Unido</h2>
+      <p>Realicé muestreos botánicos para estudiar diversidad y adaptaciones en plantas en diferentes condiciones ambientales.</p>
+    </section>
+
+    <section>
+      <h2>Ecotron CRNS, Montpellier, Francia</h2>
+      <p>Participé en experimentos controlados para estudiar respuestas fisiológicas de plantas a condiciones ambientales simuladas.</p>
+    </section>
+  </div>
+
+  <!-- Contenido en Inglés -->
+  <div class="lang-en">
+    <section>
+      <h2>Antarctica</h2>
+      <p>In 2018, I participated in a scientific expedition to Antarctica studying extremophile plants and extreme environmental conditions.</p>
+    </section>
+
+    <section>
+      <h2>Royal Botanic Gardens, Kew (UK)</h2>
+      <div class="image-text-container">
+        <img src="osmunda.jpg" alt="Royal Botanic Gardens, Kew" />
+        <p>
+          During 2017, 2018, and 2019 I conducted research stays alongside Dr. Daniel Ballesteros and Dr. Charlotte Seal. We studied long-term desiccation tolerance in chlorophyllous fern spores using techniques like DMTA, glutathione analysis by HPLC, reactive oxygen species detection, photosynthetic pigment quantification, germination assays, and chlorophyll fluorescence.
+          <br /><br />
+          This work resulted in a scientific publication providing new insights into physiological mechanisms allowing spore viability under extreme desiccation conditions over time.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>University of Montevideo, Uruguay</h2>
+      <p>I analyzed LEA proteins, focusing on their role in plant stress tolerance.</p>
+    </section>
+
+    <section>
+      <h2>Royal Botanic Garden Edinburgh, UK</h2>
+      <p>I conducted botanical sampling to study plant diversity and adaptations under different environmental conditions.</p>
+    </section>
+
+    <section>
+      <h2>Ecotron CRNS, Montpellier, France</h2>
+      <p>I participated in controlled experiments to study physiological plant responses to simulated environmental conditions.</p>
+    </section>
+  </div>
+
+  <script>
+    // Código para cambiar idioma si lo usas, sino puedes eliminarlo
+    const btnES = document.getElementById('btn-es');
+    const btnEN = document.getElementById('btn-en');
+    const langES = document.querySelectorAll('.lang-es');
+    const langEN = document.querySelectorAll('.lang-en');
+
+    function showLanguage(lang) {
+      if(lang === 'es') {
+        langES.forEach(el => el.style.display = '');
+        langEN.forEach(el => el.style.display = 'none');
+      } else {
+        langES.forEach(el => el.style.display = 'none');
+        langEN.forEach(el => el.style.display = '');
+      }
+    }
+
+    // Inicialmente español visible, inglés oculto
+    showLanguage('es');
+  </script>
+
 </body>
 </html>
-
