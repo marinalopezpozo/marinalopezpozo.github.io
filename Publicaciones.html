@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Publicaciones - Marina López Pozo</title>
     <style>
         body {
@@ -23,9 +23,63 @@
             margin-bottom: 10px;
             line-height: 1.6;
         }
+        /* Banner y navegación */
+        .banner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0984e3;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        /* Botones de idioma */
+        #language-buttons {
+            margin-left: 20px;
+        }
+        #language-buttons button {
+            font-weight: bold;
+            padding: 0.3em 0.7em;
+            margin-left: 0.3em;
+            border: none;
+            border-radius: 4px;
+            background-color: #006600;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        #language-buttons button:hover {
+            background-color: #004d00;
+        }
+        #language-buttons button.active {
+            background-color: #003300;
+        }
+        /* Ocultar contenido en inglés o español según selección */
+        .lang-en {
+            display: none;
+        }
     </style>
 </head>
-    <div class="banner">
+<body>
+
+<!-- Banner -->
+<div class="banner">
   <div style="display: flex; align-items: center;">
     <h1 class="lang-es">Publicaciones</h1>
     <h1 class="lang-en">Publications</h1>
@@ -36,7 +90,7 @@
     <a href="Proyectos.html" class="lang-es">Proyectos</a>
 
     <a href="index.html" class="lang-en">Home</a>
-    <a href="Exploration.html" class="lang-en">Exploration</a>
+    <a href="Exploration.html" class="lang-en">Travels</a>
     <a href="Proyectos.html" class="lang-en">Projects</a>
 
     <span id="language-buttons">
@@ -45,37 +99,52 @@
     </span>
   </nav>
 </div>
-<body>
-    <h1>Publicaciones</h1>
-    <ul>
-        <li>López-Pozo, M.; McNamara, M.; Adams, W.W.A., III; Demmig-Adams, B. (2024). A preharvest finishing procedure for Lemna to produce high levels of zeaxanthin that is retained post-high-light exposure. <i>Future Foods</i>, 10, 100517.</li>
-        <li>López-Pozo, M.; Adams, W.W.A., III; Demmig-Adams, B. (2023). Lemnaceae as Novel Crop Candidates for CO₂ Sequestration and Additional Applications. <i>Plants</i>, 12, 3090. <b>*Selected as a Title Story/Website rolling banner*</b></li>
-        <li>López-Pozo, M; Adams, W.W, III; Polutchko, S.K; Demmig-Adams, B. (2023). Lemna Is Productive and Nutritious in Low Light. <i>E Scholarly Community Encyclopedia</i> (contributed entry).</li>
-        <li>López-Pozo, M; Fernández-Marín, B; García-Plazaola, J I; Seal, C; Ballesteros, D. (2023). Ageing kinetics of fern’s chlorophyllous spores... <i>Environmental and Experimental Botany</i>, 337: 111870.</li>
-        <li>López-Pozo, M; Adams, W.W, III; Polutchko, S.K; Demmig-Adams, B. (2023). Terrestrial and Floating Aquatic Plants Differ in Acclimation to Light Environment. <i>Plants</i>, 12: 1928.</li>
-        <li>López-Pozo, M; Zenir, M; Polutchko, S; Stewart, J; Adams, WW III; et al. (2023). Effects of Growth Environment on Lemna minor. <i>E Scholarly Community Encyclopedia</i> (contributed entry).</li>
-        <li>Gómez-Sagasti, MT; López-Pozo, M; et al. (2023). Carotenoids and their derivatives... <i>Environmental and Experimental Botany</i>, 207: 105229.</li>
-        <li>Zenir, M.C.; López-Pozo, M.; et al. (2023). Productivity and Nutrient Quality of Lemna minor... <i>Stresses</i>, 3: 69–85.</li>
-        <li>Polutchko, S.K.; Stewart, J.J.; McNamara, M.; Doherty Garcia, N.; López-Pozo, M; et al. (2022). Floating plants as sustainable crops... <i>Nutraceuticals</i>, 2(4): 350-364.</li>
-        <li>García-Plazaola, JI; Arzac MI; et al. (2022). Freezing and desiccation tolerance in Pyropia endiviifolia. <i>European Journal of Phycology</i>.</li>
-        <li>García-Plazaola, J.I.; López-Pozo, M.; Fernández-Marín, B. (2022). Xanthophyll cycles in moss and Antarctic hair grass. <i>Polar Biology</i>, 45: 1247–1256.</li>
-        <li>Demmig-Adams, B.; López-Pozo, M.; et al. (2022). Photosynthesis, stress, and the plant microbiome. <i>Photosynthetica</i>, 60 (1): 59-69.</li>
-        <li>Demmig-Adams, B.; López-Pozo, M.; et al. (2022). Growth and Nutritional Quality of Lemnaceae. <i>Plants</i>, 11: 145.</li>
-        <li>Stewart, J.J.; Adams, W.W., III; López-Pozo, M.; et al. (2021). Duckweed Lemna and light extremes. <i>Cells</i>, 10: 1481.</li>
-        <li>Nadal, M; Brodribb, TJ; Fernández‐Marín, B; López-Pozo, M; et al. (2021). Water stress response in ferns. <i>New Phytologist</i>, 231 (4): 1415-1430.</li>
-        <li>Fernández-Marín, B; Arzac, M; López-Pozo, M; et al. (2021). Xanthophyll cycle and xylem traits in fern winter tolerance. <i>Journal of Experimental Botany</i>, 72 (8): 3168–3184.</li>
-        <li>Polutchko, S; Demmig-Adams, B; Stewart, J; López-Pozo, M; Adams WW III. (2020). Zeaxanthin and photoprotection. <i>E Scholarly Community Encyclopedia</i>.</li>
-        <li>Demmig-Adams, B; Stewart, JJ; López-Pozo, M; et al. (2020). Zeaxanthin in many environments. <i>Molecules</i>, 25: 5825.</li>
-        <li>Fernández‐Marín, B; Nadal, M; Gago, J; López‐Pozo, M; et al. (2020). Double tolerance in a resurrection plant. <i>New Phytologist</i>, 226: 741-759.</li>
-        <li>Demmig-Adams, B; López-Pozo, M; et al. (2020). Zeaxanthin and lutein roles. <i>Molecules</i>, 25: 3607.</li>
-        <li>Stewart, JJ; Adams, WW III; López-Pozo, M; et al. (2020). Carotenoids in Lemna gibba. <i>Frontiers in Plant Science</i>, 11, 480.</li>
-        <li>Fernández-Marín, B; López-Pozo, M; et al. (2020). Lichenization in Antarctica. <i>Annals of Botany</i>, 124: 1211–1226.</li>
-        <li>López-Pozo, M; Flexas, F; Gulías, J; et al. (2019). Estimating desiccation tolerance. <i>Physiologia Plantarum</i>, 167: 540-555.</li>
-        <li>Gasulla, F; García-Plazaola, JI; López-Pozo, M; et al. (2019). Oligogalactolipids and photosynthesis. <i>Environmental and Experimental Botany</i>, 164: 135-148.</li>
-        <li>López-Pozo, M; Ballesteros, D; et al. (2019). Desiccation tolerance in fern spores. <i>Frontiers in Plant Science</i>, 10: 1130.</li>
-        <li>López-Pozo, M; Gasulla, F; García-Plazaola, JI; et al. (2019). Metabolic mechanisms in chloroplast desiccation. <i>Plant Science</i>, 281: 251-260.</li>
-        <li>López-Pozo, M; Fernández-Marín, B; García-Plazaola, JI; Ballesteros D. (2018). Desiccation tolerance in ferns. <i>Frontiers in Plant Science</i>.</li>
-    </ul>
-</body>
-</html>
 
+<!-- Contenido en Español -->
+<div class="lang-es">
+  <ul>
+    <li>López-Pozo, M.; McNamara, M.; Adams, W.W.A., III; Demmig-Adams, B. (2024). A preharvest finishing procedure for Lemna to produce high levels of zeaxanthin that is retained post-high-light exposure. <i>Future Foods</i>, 10, 100517.</li>
+    <li>López-Pozo, M.; Adams, W.W.A., III; Demmig-Adams, B. (2023). Lemnaceae as Novel Crop Candidates for CO₂ Sequestration and Additional Applications. <i>Plants</i>, 12, 3090. <b>*Selected as a Title Story/Website rolling banner*</b></li>
+    <li>López-Pozo, M; Adams, W.W, III; Polutchko, S.K; Demmig-Adams, B. (2023). Lemna Is Productive and Nutritious in Low Light. <i>E Scholarly Community Encyclopedia</i> (contributed entry).</li>
+    <li>López-Pozo, M; Fernández-Marín, B; García-Plazaola, J I; Seal, C; Ballesteros, D. (2023). Ageing kinetics of fern’s chlorophyllous spores during dry storage is determined by the antioxidant potential of the cell, promoted by light and oxygen, and likely induced by the photosynthetic machinery (even in the dark). <i>Environmental and Experimental Botany</i>, 337: 111870.</li>
+    <li>López-Pozo, M; Adams, W.W, III; Polutchko, S.K; Demmig-Adams, B. (2023). Terrestrial and Floating Aquatic Plants Differ in Acclimation to Light Environment. <i>Plants</i>, 12: 1928.</li>
+    <li>López-Pozo, M; Zenir, M; Polutchko, S; Stewart, J; Adams, WW III; et al., (2023). Effects of Growth Environment on Lemna minor. <i>E Scholarly Community Encyclopedia</i> (contributed entry).</li>
+    <li>Gómez-Sagasti, MT; López-Pozo, M; Artetxe, U; Becerril, JM; Hernández, A; et al., (2023). Carotenoids and their derivatives: A “Swiss Army knife-like” multifunctional tool for fine-tuning plant-environment interactions. <i>Environmental and Experimental Botany</i>, 207: 105229 (co-authored with Gómez-Sagasti).</li>
+    <li>Zenir, M.C.; López-Pozo, M.; Polutchko, S.K.; Stewart, J.J.; Adams, (2023). Productivity and Nutrient Quality of Lemna minor as Affected by Microbiome, CO2 Level, and Nutrient Supply. <i>Stresses</i>, 3: 69–85.</li>
+    <li>Polutchko, S.K.; Stewart, J.J.; McNamara, M.; Doherty Garcia, N.; López-Pozo, M; et al., (2022). Floating plants as sustainable, highly nutritious crops: Nutrient production in different light environments. <i>Nutraceuticals</i>, 2(4): 350-364.</li>
+    <li>García-Plazaola JI, Arzac MI; Brazales L, Fernández J, Laza JM, Vilas JL, López-Pozo M, et al., (2022). Freezing and desiccation tolerance in the Antarctic bangiophyte Pyropia endiviifolia: a chicken and egg problem? <i>European Journal of Phycology</i>.</li>
+    <li>García-Plazaola, J.I., López-Pozo, M. & Fernández-Marín, B. (2022) Xanthophyll cycles in the juniper haircap moss (Polytrichum juniperinum) and Antarctic hair grass (Deschampsia antarctica) on Livingston Island (South Shetland Islands, Maritime Antarctica). <i>Polar Biology</i>, 45: 1247–1256.</li>
+    <li>Demmig-Adams, B.; López-Pozo, M.; Polutchko, S.K.; Fourounjian, P.; Stewart, JJ; et al., (2022). Intersections: Photosynthesis, abiotic stress, and the plant microbiome. <i>Photosynthetica</i>, 60 (1): 59-69.</li>
+    <li>Demmig-Adams, B.; López-Pozo, M.; Polutchko, S.K.; Fourounjian, P.; Stewart, J.J; et al., (2022) Growth and Nutritional Quality of Lemnaceae Viewed Comparatively in an Ecological and Evolutionary Context. <i>Plants</i>, 11: 145.</li>
+    <li>Stewart, J.J.; Adams, W.W., III; López-Pozo, M.; Doherty Garcia, N.; McNamara, M: et al., (2021). Features of the Duckweed Lemna That Support Rapid Growth under Extremes of Light Intensity. <i>Cells</i>, 10: 1481.</li>
+    <li>Nadal, M; Brodribb, TJ; Fernández‐Marín, B; García‐Plazaola, JI; Arzac, MI; López-Pozo, M; et al., (2021). Differences in biochemical, gas exchange and hydraulic response to water stress in desiccation tolerant and sensitive fronds of the fern Anemia caffrorum. <i>New Phytologist</i>, 231 (4): 1415-1430.</li>
+    <li>Fernández-Marín, B; Arzac, M; López-Pozo, M; Laza, JM; Roach, T; et al., (2021) Frozen in the dark: night activity of xanthophyll cycle and xylem attributes interplay in fern tolerance to winter. <i>Journal of Experimental Botany</i>, 72 (8): 3168–3184.</li>
+    <li>Polutchko S, Demmig-Adams B, Stewart J, López-Pozo M, Adams WW III (2020). Zeaxanthin and photoprotection in plants. <i>E Scholarly Community Encyclopedia</i> (contributed entry).</li>
+    <li>Demmig-Adams, B; Stewart, JJ; López-Pozo, M; Polutchko, SK; Adams, WW III. (2020) Zeaxanthin, a molecule for photoprotection in many different environments. <i>Molecules</i>, 25: 5825.</li>
+    <li>Fernández‐Marín, B; Nadal, M; Gago, J; Fernie, AR; López‐Pozo M; et al., (2020) Born to revive: molecular and physiological mechanisms of double tolerance in a paleotropical and resurrection plant. <i>New Phytologist</i>, 226: 741-759.</li>
+    <li>Demmig-Adams, B; López-Pozo, M; Stewart, JJ; Adams, WW III. (2020). Zeaxanthin and lutein: photoprotectors, anti-Inflammatories, and brain food. <i>Molecules</i>, 25: 3607.</li>
+    <li>Stewart, JJ; Adams, WW III; Escobar, CM; López-Pozo, M; Demmig-Adams, B. (2020). Growth and essential carotenoid micronutrients in Lemna gibba as a function of growth light intensity. <i>Frontiers Plant Science</i>. 11, 480.</li>
+    <li>Fernández-Marín, B; López-Pozo, M; Perera-Castro, AV; Arzac, MI; Sáenz-Ceniceros, A; et al., (2020). Symbiosis at its limits: Ecophysiological consequences of lichenization in the genus Prasiola in Antarctica. <i>Annals of Botany</i>, 124: 1211–1226.</li>
+    <li>López-Pozo, M; Flexas, F; Gulías, J; Carriquí, M; Nadal, M; Perera-Castro, AV; Clemente-Moreno, MJ; Gago, J; Núñez-Olivera, E; et al., (2019). A method for the semiquantitative estimation of desiccation tolerance across different groups of photosynthetic organisms. <i>Physiologia Plantarum</i>, 167: 540-555.</li>
+    <li>Gasulla, F, García-Plazaola JI, López-Pozo M, Fernández-Marín B (2019) Evolution, biosynthesis and protective roles of oligogalactolipids: Key molecules for terrestrial photosynthesis? <i>Environmental and Experimental Botany</i>, 164: 135-148.</li>
+    <li>López-Pozo, M; Ballesteros, D; Laza, JM; García-Plazaola, JI; Fernández-Marín, B. (2019). Desiccation tolerance in chlorophyllous fern spores: Are ecophysiological features related to environmental conditions? <i>Frontiers in Plant Science</i>, 10: 1130.</li>
+    <li>López-Pozo, M; Gasulla, F, García-Plazaola, JI; Fernández-Marín, B. (2019). Unravelling metabolic mechanisms behind chloroplast desiccation tolerance: chlorophyllous fern spore as a new promising unicellular model. <i>Plant Science</i>, 281: 251-260.</li>
+    <li>López-Pozo, M; Fernández-Marín, B; García-Plazaola, JI; Ballesteros D. (2018). Desiccation tolerance in ferns: From the unicellular spore to the multi-tissular. <i>Frontiers in Plant Science</i>.</li>
+  </ul>
+</div>
+
+<!-- Contenido en Inglés -->
+<div class="lang-en">
+  <ul>
+    <li>López-Pozo, M.; McNamara, M.; Adams, W.W.A., III; Demmig-Adams, B. (2024). A preharvest finishing procedure for Lemna to produce high levels of zeaxanthin that is retained post-high-light exposure. <i>Future Foods</i>, 10, 100517.</li>
+    <li>López-Pozo, M.; Adams, W.W.A., III; Demmig-Adams, B. (2023). Lemnaceae as Novel Crop Candidates for CO₂ Sequestration and Additional Applications. <i>Plants</i>, 12, 3090. <b>*Selected as a Title Story/Website rolling banner*</b></li>
+    <li>López-Pozo, M; Adams, W.W, III; Polutchko, S.K; Demmig-Adams, B. (2023). Lemna Is Productive and Nutritious in Low Light. <i>E Scholarly Community Encyclopedia</i> (contributed entry).</li>
+    <li>López-Pozo, M; Fernández-Marín, B; García-Plazaola, J I; Seal, C; Ballesteros, D. (2023). Ageing kinetics of fern’s chlorophyllous spores during dry storage is determined by the antioxidant potential of the cell, promoted by light and oxygen, and likely induced by the photosynthetic machinery (even in the dark). <i>Environmental and Experimental Botany</i>, 337: 111870.</li>
+    <li>López-Pozo, M; Adams, W.W, III; Polutchko, S.K; Demmig-Adams, B. (2023). Terrestrial and Floating Aquatic Plants Differ in Acclimation to Light Environment. <i>Plants</i>, 12: 1928.</li>
+    <li>López-Pozo, M; Zenir, M; Polutchko, S; Stewart, J; Adams, WW III; et al., (2023). Effects of Growth Environment on Lemna minor. <i>E Scholarly Community Encyclopedia</i> (contributed entry).</li>
+    <li>Gómez-Sagasti, MT; López-Pozo, M; Artetxe, U; Becerril, JM; Hernández, A; et al., (2023). Carotenoids and their derivatives: A “Swiss Army knife-like” multifunctional tool for fine-tuning plant-environment interactions. <i>Environmental and Experimental Botany</i>, 207: 105229 (co-authored with Gómez-Sagasti).</li>
+    <li>Zenir, M.C.; López-Pozo, M.; Polutchko, S.K.; Stewart, J.J.; Adams, (2023). Productivity and Nutrient Quality of Lemna minor as Affected by Microbiome, CO2 Level, and Nutrient Supply. <i>Stresses</i>, 3: 69–85.</li>
+    <li>Polutchko, S.K.; Stewart, J.J.; McNamara, M.; Doherty Garcia, N.; López-Pozo, M; et al., (2022). Floating plants as sustainable, highly nutritious crops: Nutrient production in different light environments. <i>Nutraceuticals</i>, 2(4): 350-364.</li>
+    <li>García-Plazaola JI, Arzac MI; Brazales L, Fernández J, Laza JM, Vilas JL, López-Pozo M, et al., (2022). Freezing and desiccation tolerance in the Antarctic bangiophyte Pyropia endiviifolia: a chicken and egg problem? <i>European Journal of Phycology</i>.</li>
+    <li>García-Plazaola, J.I., López-Pozo, M. & Fernández-Marín, B. (2022) Xanthophyll cycles in the juniper haircap moss (Polytrichum juniperinum) and Antarctic hair grass (Deschampsia antarctica) on Livingston Island (South Shetland Islands, Maritime Antarctica). <i>Polar Biology</i>, 45: 1247–1256.</li>
+    <li>Demmig-Adams, B.; López-Pozo, M.; Polutchko, S.K.; Fourounjian, P.; Stewart, JJ; et al., (2022). Intersections: Photosynthesis, abiotic stress, and the plant microbiome. <i>Photosynthetica</i>, 60 (1): 59-69.</li>
