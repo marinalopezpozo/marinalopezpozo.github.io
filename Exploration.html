@@ -10,32 +10,36 @@
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    background: #f7f9fc;
-    color: #222;
+    background: #f0f4f3;
+    color: #2e3a33;
   }
   /* Banner superior */
   .banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #e0c8c8;
-    color: white;
+    background-color: #a7c4a0; /* verde pastel */
+    color: #1f2d1f;
     padding: 15px 20px;
     border-radius: 10px;
     margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 1.6em;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
   }
   .banner h1 {
     margin: 0;
-    font-size: 1.8em;
   }
   .nav-links a {
-    color: white;
+    color: #1f2d1f;
     text-decoration: none;
     margin-left: 20px;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1em;
+    transition: color 0.3s ease;
   }
   .nav-links a:hover {
+    color: #568259;
     text-decoration: underline;
   }
 
@@ -44,37 +48,57 @@
     margin-left: 20px;
   }
   #language-buttons button {
-    font-weight: bold;
-    padding: 0.3em 0.7em;
-    margin-left: 0.3em;
+    font-weight: 600;
+    padding: 0.4em 0.9em;
+    margin-left: 0.4em;
     border: none;
-    border-radius: 4px;
-    background-color: #006600;
+    border-radius: 5px;
+    background-color: #568259;
     color: white;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(86,130,89,0.4);
   }
   #language-buttons button:hover {
-    background-color: #004d00;
+    background-color: #3b5a36;
   }
   #language-buttons button.active {
-    background-color: #003300;
+    background-color: #2d4528;
+    box-shadow: 0 2px 8px rgba(45,69,40,0.7);
   }
 
   section {
     background: white;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 7px 17px rgba(0,0,0,0.07);
   }
   h2 {
-    color: #e0c8c8;
+    color: #4a6a4d;
     margin-top: 0;
   }
   p {
-    line-height: 1.5;
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+
+  /* Estilo para sección con imagen a la izquierda */
+  .section-with-image {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .section-with-image img {
+    max-width: 210px;
+    border-radius: 10px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .section-with-image .text-content {
+    flex: 1;
   }
 
   /* Ocultar idiomas según selección */
@@ -86,7 +110,7 @@
 <body>
 
 <div class="banner">
-  <div style="display: flex; align-items: center;">
+  <div style="display: flex; align-items: center; gap: 15px;">
     <h1 class="lang-es">Viajes</h1>
     <h1 class="lang-en">Travels</h1>
   </div>
@@ -99,15 +123,15 @@
     <a href="Publicaciones.html" class="lang-en">Publications</a>
     <a href="Proyectos.html" class="lang-en">Projects</a>
 
-    <span id="language-buttons">
-      <button id="btn-es" class="active">ES</button>
-      <button id="btn-en">EN</button>
+    <span id="language-buttons" aria-label="Cambiar idioma / Change language">
+      <button id="btn-es" class="active" aria-pressed="true" aria-label="Español">ES</button>
+      <button id="btn-en" aria-pressed="false" aria-label="English">EN</button>
     </span>
   </nav>
 </div>
 
 <!-- CONTENIDO EN ESPAÑOL -->
-<div class="lang-es">
+<div class="lang-es" aria-live="polite">
   <section>
     <h2>Antártida</h2>
     <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
@@ -124,9 +148,12 @@
     <p>Analicé proteínas LEA, enfocándome en su papel en la tolerancia al estrés en plantas.</p>
   </section>
 
-  <section>
-    <h2>Jardín Botánico de Edimburgo, Reino Unido</h2>
-    <p>Realicé muestreos botánicos para estudiar diversidad y adaptaciones en plantas en diferentes condiciones ambientales.</p>
+  <section class="section-with-image">
+    <img src="osmunda.jpg" alt="Jardín Botánico de Edimburgo" />
+    <div class="text-content">
+      <h2>Jardín Botánico de Edimburgo, Reino Unido</h2>
+      <p>Realicé muestreos botánicos para estudiar diversidad y adaptaciones en plantas en diferentes condiciones ambientales.</p>
+    </div>
   </section>
 
   <section>
@@ -136,7 +163,7 @@
 </div>
 
 <!-- CONTENIDO EN INGLÉS -->
-<div class="lang-en">
+<div class="lang-en" aria-live="polite">
   <section>
     <h2>Antarctica</h2>
     <p>In 2018, I participated in a scientific expedition to Antarctica studying extremophile plants and extreme environmental conditions.</p>
@@ -144,8 +171,8 @@
 
   <section>
     <h2>Royal Botanic Gardens, Kew (UK)</h2>
-    <p>During 2017, 2018, and 2019 I conducted research stays alongside Dr. Daniel Ballesteros and Dr. Charlotte Seal. We studied long-term desiccation tolerance in chlorophyllous fern spores using techniques like DMTA, glutathione analysis by HPLC, reactive oxygen species detection, photosynthetic pigment quantification, germination assays, and chlorophyll fluorescence.</p>
-    <p>This work resulted in a scientific publication providing new insights into physiological mechanisms allowing spore viability under extreme desiccation conditions over time.</p>
+    <p>During 2017, 2018, and 2019 I conducted research stays alongside Dr. Daniel Ballesteros and Dr. Charlotte Seal. We studied long-term desiccation tolerance in chlorophyllous fern spores using techniques such as DMTA, glutathione analysis by HPLC, reactive oxygen species detection, photosynthetic pigment quantification, germination assays, and chlorophyll fluorescence.</p>
+    <p>This work resulted in a scientific publication providing new insights into physiological mechanisms that allow spore viability under extreme desiccation conditions over time.</p>
   </section>
 
   <section>
@@ -153,9 +180,12 @@
     <p>I analyzed LEA proteins, focusing on their role in plant stress tolerance.</p>
   </section>
 
-  <section>
-    <h2>Royal Botanic Garden Edinburgh, UK</h2>
-    <p>I conducted botanical sampling to study plant diversity and adaptations under different environmental conditions.</p>
+  <section class="section-with-image">
+    <img src="osmunda.jpg" alt="Royal Botanic Garden Edinburgh" />
+    <div class="text-content">
+      <h2>Royal Botanic Garden Edinburgh, UK</h2>
+      <p>I conducted botanical sampling to study plant diversity and adaptations under different environmental conditions.</p>
+    </div>
   </section>
 
   <section>
@@ -177,11 +207,15 @@
       langEN.forEach(el => el.style.display = 'none');
       btnES.classList.add('active');
       btnEN.classList.remove('active');
+      btnES.setAttribute('aria-pressed', 'true');
+      btnEN.setAttribute('aria-pressed', 'false');
     } else {
       langES.forEach(el => el.style.display = 'none');
       langEN.forEach(el => el.style.display = '');
       btnEN.classList.add('active');
       btnES.classList.remove('active');
+      btnEN.setAttribute('aria-pressed', 'true');
+      btnES.setAttribute('aria-pressed', 'false');
     }
   }
 
@@ -194,5 +228,3 @@
 
 </body>
 </html>
-
-
