@@ -24,6 +24,15 @@
     a:hover {
       text-decoration: underline;
     }
+    nav {
+      margin-bottom: 2em;
+      border-bottom: 2px solid #004d00;
+      padding-bottom: 0.5em;
+    }
+    nav a {
+      margin-right: 15px;
+      font-weight: bold;
+    }
     .photo {
       max-width: 150px;
       border-radius: 50%;
@@ -33,15 +42,23 @@
       margin-right: 15px;
       font-weight: bold;
     }
+    section {
+      margin-bottom: 3em;
+    }
   </style>
 </head>
 <body>
 
   <h1>Marina López-Pozo, PhD</h1>
 
-  <!-- Aquí puedes poner tu foto si quieres -->
-  <!-- <img src="tu-foto.jpg" alt="Foto de Marina López-Pozo" class="photo" /> -->
+  <!-- Menú de navegación -->
+  <nav>
+    <a href="#publicaciones">Publicaciones</a>
+    <a href="#viajes">Viajes</a>
+    <a href="#proyectos">Proyectos</a>
+  </nav>
 
+  <!-- Bio principal -->
   <p><strong>Científica postdoctoral en ecofisiología vegetal.</strong> Amante de la ciencia, la biología y, sobre todo, de todo lo que hace este mundo más verde, fértil y accesible para la humanidad.</p>
 
   <p>Experta en el estudio de organismos vegetales en ambientes extremos, tanto en la Tierra como más allá.  
@@ -69,5 +86,24 @@
     <a href="https://scholar.google.es/citations?user=GzKokDYAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>
   </p>
 
+  <!-- Sección Publicaciones -->
+  <section id="publicaciones">
+    <h2>Publicaciones</h2>
+    <p>Aquí puedes añadir una lista o resumen de tus publicaciones científicas más relevantes.</p>
+  </section>
+
+  <!-- Sección Viajes -->
+  <section id="viajes">
+    <h2>Viajes</h2>
+    <p>En esta sección puedes contar sobre tus experiencias de campo, colaboraciones internacionales y viajes científicos.</p>
+  </section>
+
+  <!-- Sección Proyectos -->
+  <section id="proyectos">
+    <h2>Proyectos</h2>
+    <p>Aquí puedes describir los proyectos en los que has trabajado o en los que estás involucrada actualmente.</p>
+  </section>
+
 </body>
 </html>
+
