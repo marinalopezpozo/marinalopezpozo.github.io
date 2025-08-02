@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contacto - Marina López-Pozo</title>
+  <title>Contacto / Contact - Marina López-Pozo</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -44,63 +44,60 @@
       border-radius: 10px;
       padding: 20px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      font-size: 1.1em;
+      line-height: 1.6;
     }
 
     h2 {
       color: #0984e3;
       margin-top: 0;
-    }
-
-    p {
-      line-height: 1.6;
-      font-size: 1.1em;
-    }
-
-    .form-group {
       margin-bottom: 15px;
     }
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-      font-weight: 600;
+    a.email-link {
+      color: #006600;
+      font-weight: bold;
+      text-decoration: none;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-      box-sizing: border-box;
-      resize: vertical;
-      transition: border-color 0.3s ease;
+    a.email-link:hover {
+      text-decoration: underline;
     }
 
-    input:focus, textarea:focus {
-      border-color: #09e393;
-      outline: none;
+    .note {
+      margin-top: 20px;
+      font-style: italic;
+      color: #555;
     }
 
-    button {
+    #language-buttons {
+      text-align: right;
+      margin-bottom: 1em;
+    }
+    #language-buttons button {
+      font-weight: bold;
+      padding: 0.3em 0.7em;
+      margin-left: 0.3em;
+      border: none;
+      border-radius: 4px;
       background-color: #006600;
       color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 6px;
-      font-weight: bold;
       cursor: pointer;
-      font-size: 1.1em;
+      font-size: 1em;
       transition: background-color 0.3s ease;
     }
-
-    button:hover {
+    #language-buttons button:hover {
       background-color: #004d00;
     }
+    #language-buttons button.active {
+      background-color: #003300;
+    }
 
-    .info {
-      margin-bottom: 30px;
-      font-size: 1.1em;
+    .lang {
+      display: none;
+    }
+    .lang.active {
+      display: block;
     }
 
   </style>
@@ -108,18 +105,30 @@
 <body>
 
   <div class="banner">
-    Contacto
+    <span class="lang lang-es active">Contacto</span>
+    <span class="lang lang-en">Contact</span>
     <nav>
-      <a href="index.html">Inicio</a>
-      <a href="Publicaciones.html">Publicaciones</a>
-      <a href="Proyectos.html">Proyectos</a>
-      <a href="Viajes.html">Viajes</a>
-      <a href="CV.html">CV</a>
+      <a href="index.html" class="lang lang-es active">Inicio</a>
+      <a href="Publicaciones.html" class="lang lang-es active">Publicaciones</a>
+      <a href="Proyectos.html" class="lang lang-es active">Proyectos</a>
+      <a href="Viajes.html" class="lang lang-es active">Viajes</a>
+      <a href="CV.html" class="lang lang-es active">CV</a>
+
+      <a href="index.html" class="lang lang-en">Home</a>
+      <a href="Publicaciones.html" class="lang lang-en">Publications</a>
+      <a href="Proyectos.html" class="lang lang-en">Projects</a>
+      <a href="Viajes.html" class="lang lang-en">Travels</a>
+      <a href="CV.html" class="lang lang-en">CV</a>
     </nav>
   </div>
 
+  <div id="language-buttons">
+    <button id="btn-es" class="active" aria-label="Español">ES</button>
+    <button id="btn-en" aria-label="English">EN</button>
+  </div>
+
   <section>
-    <div class="info">
+    <div class="lang lang-es active">
       <h2>Dirección institucional</h2>
       <p>
         Department of Ecology & Evolutionary Biology<br />
@@ -128,52 +137,56 @@
         Boulder, CO 80309-0334<br />
         USA
       </p>
+
       <h2>Correo electrónico</h2>
-      <p>marina.lopezpozo@colorado.edu</p>
+      <p>
+        <a href="mailto:marina.lopezpozo@colorado.edu" class="email-link">marina.lopezpozo@colorado.edu</a>
+      </p>
+
+      <p class="note">Por favor, escríbeme directamente a este correo. Me pondré en contacto contigo lo antes posible. ¡Gracias!</p>
     </div>
 
-    <h2>Formulario de contacto</h2>
-    <form id="contactForm" onsubmit="return enviarFormulario(event)">
-      <div class="form-group">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div class="form-group">
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
-      </div>
-      <button type="submit">Enviar</button>
-    </form>
+    <div class="lang lang-en">
+      <h2>Institutional Address</h2>
+      <p>
+        Department of Ecology & Evolutionary Biology<br />
+        UCB 344; Ramaley N122<br />
+        University of Colorado<br />
+        Boulder, CO 80309-0334<br />
+        USA
+      </p>
+
+      <h2>Email</h2>
+      <p>
+        <a href="mailto:marina.lopezpozo@colorado.edu" class="email-link">marina.lopezpozo@colorado.edu</a>
+      </p>
+
+      <p class="note">Please write to me directly at this email. I will get back to you as soon as possible. Thank you!</p>
+    </div>
   </section>
 
   <script>
-    function enviarFormulario(event) {
-      event.preventDefault();
+    const btnES = document.getElementById('btn-es');
+    const btnEN = document.getElementById('btn-en');
+    const langsES = document.querySelectorAll('.lang-es');
+    const langsEN = document.querySelectorAll('.lang-en');
 
-      // Obtener datos del formulario
-      const nombre = document.getElementById('nombre').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const mensaje = document.getElementById('mensaje').value.trim();
-
-      if (!nombre || !email || !mensaje) {
-        alert('Por favor, completa todos los campos.');
-        return false;
+    function setLanguage(lang) {
+      if (lang === 'es') {
+        langsES.forEach(el => el.classList.add('active'));
+        langsEN.forEach(el => el.classList.remove('active'));
+        btnES.classList.add('active');
+        btnEN.classList.remove('active');
+      } else {
+        langsEN.forEach(el => el.classList.add('active'));
+        langsES.forEach(el => el.classList.remove('active'));
+        btnEN.classList.add('active');
+        btnES.classList.remove('active');
       }
-
-      // Aquí podrías añadir lógica para enviar datos a servidor o API
-      // Por ahora solo mostramos un mensaje de confirmación
-
-      alert(`Gracias por tu mensaje, ${nombre}. Me pondré en contacto contigo pronto.`);
-
-      // Opcional: resetear formulario
-      document.getElementById('contactForm').reset();
-
-      return true;
     }
+
+    btnES.addEventListener('click', () => setLanguage('es'));
+    btnEN.addEventListener('click', () => setLanguage('en'));
   </script>
 
 </body>
