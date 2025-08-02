@@ -1,28 +1,123 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Proyectos - Marina López Pozo</title>
+    <meta charset="UTF-8" />
+    <title>Proyectos - Marina López-Pozo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
+            margin: 20px;
+            background-color: #f9f9f9;
             color: #333;
         }
-        h1 {
-            color: #006699;
+        header {
+            background-color: #004466;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5em;
+            flex-grow: 1;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         ul {
             list-style-type: none;
             padding-left: 0;
+            max-width: 800px;
+            margin-top: 30px;
         }
         li {
-            margin-bottom: 10px;
-            line-height: 1.6;
+            background: white;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+        }
+        .project-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #004466;
+            margin-bottom: 5px;
+        }
+        .project-details {
+            font-size: 0.95em;
+            color: #555;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Proyectos de Investigación</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="publicaciones.html">Publicaciones</a>
+            <a href="viajes.html">Viajes</a>
+        </nav>
+    </header>
+
+    <ul>
+        <li>
+            <div class="project-title">The Lunar Effects on Agricultural Flora (LEAF)</div>
+            <div class="project-details">
+                Deployed Instruments for Artemis III Mission. NASA. 2024-2027.<br/>
+                Postdoctoral Researcher
+            </div>
+        </li>
+        <li>
+            <div class="project-title">Co-optimization of duckweed biomass, nutritional quality, & input use efficiency</div>
+            <div class="project-details">
+                NASA-TRISH. 2019-2021.<br/>
+                Postdoctoral Researcher
+            </div>
+        </li>
+        <li>
+            <div class="project-title">Influence of rhizosphere microbes on duckweed transcriptome under elevated CO2</div>
+            <div class="project-details">
+                Joint Genome Institute (USA, Department of Energy). 2021.<br/>
+                Principal Investigator
+            </div>
+        </li>
+        <li>
+            <div class="project-title">Physiological basis of Outlier model systems in the Photosynthesis-multitolerance tradE off: learning from high Yields in extreme Environments (POPEYE)</div>
+            <div class="project-details">
+                Spanish Government. 2023-2027.<br/>
+                Postdoctoral Researcher
+            </div>
+        </li>
+        <li>
+            <div class="project-title">Ecophysiological and evolutionary roots of stress tolerance in plants (EREMITA)</div>
+            <div class="project-details">
+                Spanish Government. 2019-2021.<br/>
+                Postdoctoral Researcher
+            </div>
+        </li>
+        <li>
+            <div class="project-title">Uncovering the volatile nature of bryophytes (VolNaBry)</div>
+            <div class="project-details">
+                Asociación Española de Ecología Terrestre. 2018-2019.<br/>
+                Predoctoral Researcher
+            </div>
+        </li>
+        <li>
+            <div class="project-title">Mechanistic bases for compensation between photosynthesis and stress tolerance: filling in knowledge gaps for evolutionary biology and plant biotechnology (TOPSTEP)</div>
+            <div class="project-details">
+                Spanish Government. 2015-2018.<br/>
+                Predoctoral Researcher
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
+
