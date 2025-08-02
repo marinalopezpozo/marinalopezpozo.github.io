@@ -21,13 +21,19 @@
       width: 100vw;
       background-color: #004d00;
       color: white;
-      padding: 1em 0;
-      text-align: center;
+      padding: 0.5em 1em;
+      display: flex;
+      align-items: center;
+      gap: 15px;
       font-family: 'Arial Black', Arial, sans-serif;
       font-size: 2.5em;
       font-weight: bold;
       box-shadow: 0 2px 5px rgba(0,0,0,0.3);
       z-index: 1000;
+    }
+    .banner-img {
+      height: 40px;
+      border-radius: 5px;
     }
     .content-wrapper {
       margin-top: 80px;
@@ -91,7 +97,8 @@
 <body>
 
   <div class="top-banner">
-    Ad Astra!
+    <img src="logo.jpg" alt="Logo" class="banner-img" />
+    <span>Ad Astra!</span>
   </div>
 
   <div class="content-wrapper">
