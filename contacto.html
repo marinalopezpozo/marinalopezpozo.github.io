@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - Marina López Pozo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    nav {
+      background-color: #006699;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .lang-switch {
+      text-align: right;
+      margin: 10px 0;
+    }
+    .lang-switch button {
+      font-weight: bold;
+      padding: 0.3em 0.7em;
+      border: none;
+      border-radius: 4px;
+      background-color: #006600;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    h1 {
+      color: #006699;
+    }
+    .contact-links a {
+      display: inline-block;
+      margin-right: 20px;
+      color: #006699;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function toggleLang(lang) {
+      document.getElementById('es').style.display = lang === 'es' ? 'block' : 'none';
+      document.getElementById('en').style.display = lang === 'en' ? 'block' : 'none';
+    }
+  </script>
+</head>
+<body>
+  <div class="lang-switch">
+    <button onclick="toggleLang('es')">ES</button>
+    <button onclick="toggleLang('en')">EN</button>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio / Home</a>
+    <a href="Publicaciones.html">Publicaciones / Publications</a>
+    <a href="Exploration.html">Viajes / Travels</a>
+    <a href="Proyectos.html">Proyectos / Projects</a>
+    <a href="CV.html">CV</a>
+    <a href="Contacto.html">Contacto / Contact</a>
+  </nav>
+
+  <div id="es">
+    <h1>Contacto</h1>
+    <p class="contact-links">
+      <a href="https://orcid.org/0000-0002-0425-4062" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-pozo-012460b7/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.es/citations?user=GzKokDYAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>
+    </p>
+  </div>
+
+  <div id="en" style="display:none;">
+    <h1>Contact</h1>
+    <p class="contact-links">
+      <a href="https://orcid.org/0000-0002-0425-4062" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-pozo-012460b7/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://scholar.google.es/citations?user=GzKokDYAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>
+    </p>
+  </div>
+</body>
+</html>
 
