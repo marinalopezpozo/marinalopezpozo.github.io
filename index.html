@@ -3,39 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marina López-Pozo</title>
+  <title>Marina López-Pozo, PhD</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 1000px;
+      font-family: Arial, sans-serif;
+      background-color: #e6f2e6;
+      color: #000000;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 20px;
-      background: #f7f9fc;
-      color: #222;
+      padding: 2em;
+      line-height: 1.6;
     }
-    .banner {
+    .top-banner {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      background-color: #004d00;
+      color: white;
+      padding: 0.5em 1em;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      background-color: #30a99b;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-    }
-    .banner h1 {
-      margin: 0;
-      font-size: 1.8em;
-    }
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
+      gap: 15px;
+      font-family: 'Arial Black', Arial, sans-serif;
+      font-size: 2.5em;
       font-weight: bold;
-      font-size: 1em;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 1000;
     }
-    .nav-links a:hover {
+    .banner-img {
+      height: 40px;
+      border-radius: 5px;
+    }
+    .content-wrapper {
+      margin-top: 80px;
+    }
+    h1, h2 {
+      color: #000000;
+    }
+    a {
+      color: #003366;
+      text-decoration: none;
+    }
+    a:hover {
       text-decoration: underline;
+    }
+    nav {
+      margin-bottom: 2em;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 0.5em;
+    }
+    nav a {
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    .contact-links a {
+      margin-right: 15px;
+      font-weight: bold;
+    }
+    section {
+      margin-bottom: 3em;
+    }
+    .lang {
+      display: none;
+    }
+    .lang.active {
+      display: block;
+    }
+    #language-buttons {
+      text-align: right;
+      margin-bottom: 1em;
     }
     #language-buttons button {
       font-weight: bold;
@@ -55,125 +92,115 @@
     #language-buttons button.active {
       background-color: #003300;
     }
-    section {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #0984e3;
-      margin-top: 0;
-    }
-    .lang-en {
-      display: none;
-    }
   </style>
 </head>
 <body>
 
-<div class="banner">
-  <div style="display: flex; align-items: center;">
-    <h1 class="lang-es">Marina López-Pozo</h1>
-    <h1 class="lang-en">Marina López-Pozo</h1>
+  <div class="top-banner">
+    <img src="logo.jpeg" alt="Logo" class="banner-img" />
+    <span>Ad Astra!</span>
   </div>
-  <nav class="nav-links">
-    <a href="index.html" class="lang-es">Inicio</a>
-    <a href="Publicaciones.html" class="lang-es">Publicaciones</a>
-    <a href="Proyectos.html" class="lang-es">Proyectos</a>
-    <a href="Viajes.html" class="lang-es">Viajes</a>
-    
-    <a href="index.html" class="lang-en">Home</a>
-    <a href="Publicaciones.html" class="lang-en">Publications</a>
-    <a href="Proyectos.html" class="lang-en">Projects</a>
-    <a href="Viajes.html" class="lang-en">Travels</a>
 
-    <span id="language-buttons">
-      <button id="btn-es" class="active">ES</button>
-      <button id="btn-en">EN</button>
-    </span>
-  </nav>
-</div>
+  <div class="content-wrapper">
 
-<!-- Español -->
-<div class="lang-es">
-  <section>
-    <h2>Bienvenida</h2>
-    <p>Soy Marina López-Pozo, investigadora en biología vegetal y apasionada de la ciencia espacial, la biodiversidad y la comunicación científica. He trabajado en varios centros de investigación internacionales estudiando desde la fisiología del estrés en plantas hasta su potencial para la exploración espacial.</p>
-  </section>
+    <div id="language-buttons">
+      <button id="btn-es" class="active" aria-label="Español">ES</button>
+      <button id="btn-en" aria-label="English">EN</button>
+    </div>
 
-  <section>
-    <h2>Explora mi trabajo</h2>
-    <ul>
-      <li><a href="Publicaciones.html">Publicaciones científicas</a></li>
-      <li><a href="Proyectos.html">Proyectos en los que he participado</a></li>
-      <li><a href="Viajes.html">Lugares donde he investigado</a></li>
-    </ul>
-  </section>
+    <div id="es" class="lang active">
+      <h1>Marina López-Pozo, PhD</h1>
 
-  <section>
-    <h2>Contacto</h2>
-    <p>Email: marinaplantbio [at] gmail.com</p>
-    <p>
-      <a href="https://orcid.org/0000-0003-0000-0000" target="_blank">ORCID</a> |
-      <a href="https://scholar.google.com" target="_blank">Google Scholar</a> |
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-    </p>
-  </section>
-</div>
+       <nav>
+    <a href="Publicaciones.html">Publicaciones</a>
+    <a href="Exploration.html">Viajes</a>
+    <a href="Proyectos.html">Proyectos</a>
+      </nav>
 
-<!-- English -->
-<div class="lang-en">
-  <section>
-    <h2>Welcome</h2>
-    <p>I am Marina López-Pozo, a plant biology researcher passionate about space science, biodiversity, and scientific communication. I have worked in several international research centers studying everything from plant stress physiology to their potential for space exploration.</p>
-  </section>
 
-  <section>
-    <h2>Explore my work</h2>
-    <ul>
-      <li><a href="Publicaciones.html">Scientific publications</a></li>
-      <li><a href="Proyectos.html">Projects I've participated in</a></li>
-      <li><a href="Viajes.html">Research travels</a></li>
-    </ul>
-  </section>
+      <p><strong>Científica postdoctoral en ecofisiología vegetal.</strong> Amante de la ciencia, la biología y, sobre todo, de todo lo que hace este mundo más verde, fértil y accesible para la humanidad.</p>
 
-  <section>
-    <h2>Contact</h2>
-    <p>Email: marinaplantbio [at] gmail.com</p>
-    <p>
-      <a href="https://orcid.org/0000-0003-0000-0000" target="_blank">ORCID</a> |
-      <a href="https://scholar.google.com" target="_blank">Google Scholar</a> |
-      <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
-    </p>
-  </section>
-</div>
+      <p>Experta en el estudio de organismos vegetales en ambientes extremos, tanto en la Tierra como más allá.  
+      Desarrollé mi tesis doctoral entre mi tierra querida, llena de verdor y mar, y los rincones más inhóspitos del mundo.  
+      Continué persiguiendo y cumpliendo mis sueños al unirme a un proyecto financiado por la NASA en la Universidad de Colorado para el desarrollo de cultivos espaciales.</p>
 
-<script>
-  const btnES = document.getElementById('btn-es');
-  const btnEN = document.getElementById('btn-en');
-  const langES = document.querySelectorAll('.lang-es');
-  const langEN = document.querySelectorAll('.lang-en');
+      <p>Actualmente formo parte del equipo de investigación que intentará llevar plantas a la Luna.  
+      Los límites están en nuestra mente, y también nuestros sueños, que no tienen fin.</p>
 
-  function showLanguage(lang) {
-    if(lang === 'es') {
-      langES.forEach(el => el.style.display = '');
-      langEN.forEach(el => el.style.display = 'none');
-      btnES.classList.add('active');
-      btnEN.classList.remove('active');
-    } else {
-      langES.forEach(el => el.style.display = 'none');
-      langEN.forEach(el => el.style.display = '');
-      btnEN.classList.add('active');
-      btnES.classList.remove('active');
+      <h2>Áreas de experiencia</h2>
+      <ul>
+        <li>Ecofisiología del estrés ambiental en plantas (agua, luz, temperatura, CO<sub>2</sub>)</li>
+        <li>Medición de fotosíntesis y fluorescencia de clorofila</li>
+        <li>Aislamiento y análisis de pigmentos, lípidos, proteínas, especies reactivas de oxígeno y antioxidantes</li>
+        <li>Producción de biomasa y productos saludables</li>
+        <li>Amplia experiencia internacional colaborando en más de cinco países</li>
+      </ul>
+
+      <h2>Contacto</h2>
+      <p>Email: <a href="mailto:marina.lopezpozo@colorado.edu">marina.lopezpozo@colorado.edu</a></p>
+
+      <p class="contact-links">
+        <a href="https://orcid.org/0000-0002-0425-4062" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-pozo-012460b7/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.es/citations?user=GzKokDYAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>
+      </p>
+    </div>
+
+    <div id="en" class="lang">
+      <h1>Marina López-Pozo, PhD</h1>
+
+      <nav>
+        <a href="Publicaciones.html">Publications</a>
+        <a href="Exploration.html">Travels</a>
+        <a href="Proyectos.html">Projects</a>
+      </nav>
+
+      <p><strong>Postdoctoral scientist in plant ecophysiology.</strong> Lover of science, biology, and above all, of everything that makes this world greener, more fertile and accessible to humankind.</p>
+
+      <p>Expert in studying plant organisms in extreme environments, both on Earth and beyond.  
+      I developed my doctoral thesis between my beloved land full of greenery and sea, and the most inhospitable corners of the world.  
+      I continued pursuing and fulfilling my dreams by joining a NASA-funded project at the University of Colorado for space crop development.</p>
+
+      <p>I am currently part of the research team aiming to take plants to the Moon.  
+      Limits are in our minds, and so are our dreams, which have no end.</p>
+
+      <h2>Areas of expertise</h2>
+      <ul>
+        <li>Environmental stress ecophysiology in plants (water, light, temperature, CO<sub>2</sub>)</li>
+        <li>Photosynthesis and chlorophyll fluorescence measurements</li>
+        <li>Isolation and analysis of pigments, lipids, proteins, reactive oxygen species and antioxidants</li>
+        <li>Biomass and healthy product production</li>
+        <li>Wide international experience collaborating in more than five countries</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:marina.lopezpozo@colorado.edu">marina.lopezpozo@colorado.edu</a></p>
+
+      <p class="contact-links">
+        <a href="https://orcid.org/0000-0002-0425-4062" target="_blank" rel="noopener">ORCID</a>
+        <a href="https://www.linkedin.com/in/marina-l%C3%B3pez-pozo-012460b7/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.es/citations?user=GzKokDYAAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    const btnEs = document.getElementById('btn-es');
+    const btnEn = document.getElementById('btn-en');
+    const languages = document.querySelectorAll('.lang');
+
+    function setLanguage(lang) {
+      languages.forEach(div => {
+        div.classList.toggle('active', div.id === lang);
+      });
+      btnEs.classList.toggle('active', lang === 'es');
+      btnEn.classList.toggle('active', lang === 'en');
     }
-  }
 
-  btnES.addEventListener('click', () => showLanguage('es'));
-  btnEN.addEventListener('click', () => showLanguage('en'));
-  showLanguage('es');
-</script>
+    btnEs.addEventListener('click', () => setLanguage('es'));
+    btnEn.addEventListener('click', () => setLanguage('en'));
+  </script>
 
 </body>
 </html>
