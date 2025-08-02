@@ -1,119 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <title>Colaboraciones - Marina López-Pozo</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #006699;
-        }
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-        li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        #language-buttons {
-            text-align: right;
-            margin-bottom: 1em;
-        }
-        #language-buttons button {
-            font-weight: bold;
-            padding: 0.3em 0.7em;
-            margin-left: 0.3em;
-            border: none;
-            border-radius: 4px;
-            background-color: #006600;
-            color: white;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-        #language-buttons button:hover {
-            background-color: #004d00;
-        }
-        #language-buttons button.active {
-            background-color: #003300;
-        }
-        .lang {
-            display: none;
-        }
-        .lang.active {
-            display: block;
-        }
-    </style>
+<meta charset="UTF-8" />
+<title>Viajes - Marina López-Pozo</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f7f9fc;
+    color: #222;
+  }
+  /* Banner superior */
+  .banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0984e3;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .banner h1 {
+    margin: 0;
+    font-size: 1.8em;
+  }
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  section {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  }
+  h2 {
+    color: #0984e3;
+    margin-top: 0;
+  }
+  p {
+    line-height: 1.5;
+  }
+</style>
 </head>
 <body>
 
-<div id="language-buttons">
-    <button id="btn-es" class="active">ES</button>
-    <button id="btn-en">EN</button>
+<div class="banner">
+  <h1>Viajes</h1>
+  <nav class="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="publicaciones.html">Publicaciones</a>
+    <a href="proyectos.html">Proyectos</a>
+  </nav>
 </div>
 
-<!-- Contenido en español -->
-<div id="content-es" class="lang active">
-  <h1>Exploración</h1>
-  <p>He tenido la oportunidad de viajar a lugares increíbles, incluyendo la Antártida.</p>
-  <section>
-    <h2>Antártida</h2>
-    <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
-    <p>Fue una experiencia única que amplió mucho mi perspectiva científica y personal.</p>
-  </section>
-  <h2>Royal Botanic Gardens Kew</h2>
-  <p>Durante 2017, 2018 y 2019 realicé estancias de investigación en los Royal Botanic Gardens, Kew (Reino Unido), trabajando junto al Dr. Daniel Ballesteros y la Dra. Charlotte Seal. 
-      Estudiamos la tolerancia a la desecación a largo plazo en esporas clorofílicas de helecho utilizando técnicas como DMTA, análisis de glutatión por HPLC, 
-      detección de especies reactivas de oxígeno, cuantificación de pigmentos fotosintéticos, ensayos de germinación y fluorescencia de la clorofila.</p>
-  <p>Este trabajo dio lugar a una publicación científica que aporta nuevas perspectivas sobre los mecanismos fisiológicos que permiten la viabilidad de esporas en condiciones extremas 
-      de desecación a lo largo del tiempo.</p>
-</div>
+<section>
+  <h2>Antártida</h2>
+  <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
+</section>
 
-<!-- Contenido en inglés -->
-<div id="content-en" class="lang">
-  <h1>Exploration</h1>
-  <p>I have had the opportunity to travel to incredible places, including Antarctica.</p>
-  <section>
-    <h2>Antarctica</h2>
-    <p>In 2018, I participated in a scientific expedition to Antarctica where I studied extremophile plants and extreme environmental conditions.</p>
-    <p>It was a unique experience that greatly expanded my scientific and personal perspective.</p>
-  </section>
-  <h2>Royal Botanic Gardens Kew</h2>
-  <p>During 2017, 2018, and 2019 I conducted research stays at the Royal Botanic Gardens, Kew (UK), working alongside Dr. Daniel Ballesteros and Dr. Charlotte Seal. 
-      We studied long-term desiccation tolerance in chlorophyllous fern spores using techniques such as DMTA, glutathione analysis by HPLC, 
-      detection of reactive oxygen species, quantification of photosynthetic pigments, germination assays, and chlorophyll fluorescence.</p>
-  <p>This work resulted in a scientific publication providing new insights into the physiological mechanisms that allow spore viability under extreme 
-      long-term desiccation conditions.</p>
-</div>
+<section>
+  <h2>Royal Botanic Gardens, Kew (Reino Unido)</h2>
+  <p>Durante 2017, 2018 y 2019 realicé estancias de investigación junto al Dr. Daniel Ballesteros y la Dra. Charlotte Seal. Estudiamos la tolerancia a la desecación a largo plazo en esporas clorofílicas de helecho utilizando técnicas como DMTA, análisis de glutatión por HPLC, detección de especies reactivas de oxígeno, cuantificación de pigmentos fotosintéticos, ensayos de germinación y fluorescencia de la clorofila.</p>
+  <p>Este trabajo dio lugar a una publicación científica que aporta nuevas perspectivas sobre los mecanismos fisiológicos que permiten la viabilidad de esporas en condiciones extremas de desecación a lo largo del tiempo.</p>
+</section>
 
-<script>
-    const btnEs = document.getElementById('btn-es');
-    const btnEn = document.getElementById('btn-en');
-    const contentEs = document.getElementById('content-es');
-    const contentEn = document.getElementById('content-en');
+<section>
+  <h2>Universidad de Montevideo, Uruguay</h2>
+  <p>Analicé proteínas LEA, enfocándome en su papel en la tolerancia al estrés en plantas.</p>
+</section>
 
-    btnEs.addEventListener('click', () => {
-        btnEs.classList.add('active');
-        btnEn.classList.remove('active');
-        contentEs.classList.add('active');
-        contentEn.classList.remove('active');
-    });
+<section>
+  <h2>Jardín Botánico de Edimburgo, Reino Unido</h2>
+  <p>Realicé muestreos botánicos para estudiar diversidad y adaptaciones en plantas en diferentes condiciones ambientales.</p>
+</section>
 
-    btnEn.addEventListener('click', () => {
-        btnEn.classList.add('active');
-        btnEs.classList.remove('active');
-        contentEn.classList.add('active');
-        contentEs.classList.remove('active');
-    });
-</script>
+<section>
+  <h2>Ecotron CRNS, Montpellier, Francia</h2>
+  <p>Participé en experimentos controlados para estudiar respuestas fisiológicas de plantas a condiciones ambientales simuladas.</p>
+</section>
 
 </body>
 </html>
+
