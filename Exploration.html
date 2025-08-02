@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Colaboraciones - Marina López Pozo</title>
+    <meta charset="UTF-8" />
+    <title>Colaboraciones - Marina López-Pozo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -23,41 +23,97 @@
             margin-bottom: 10px;
             line-height: 1.6;
         }
-    #language-buttons {
-      text-align: right;
-      margin-bottom: 1em;
-    }
-    #language-buttons button {
-      font-weight: bold;
-      padding: 0.3em 0.7em;
-      margin-left: 0.3em;
-      border: none;
-      border-radius: 4px;
-      background-color: #006600;
-      color: white;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.3s ease;
-    }
-    #language-buttons button:hover {
-      background-color: #004d00;
-    }
-    #language-buttons button.active {
-      background-color: #003300;
-    }
+        #language-buttons {
+            text-align: right;
+            margin-bottom: 1em;
+        }
+        #language-buttons button {
+            font-weight: bold;
+            padding: 0.3em 0.7em;
+            margin-left: 0.3em;
+            border: none;
+            border-radius: 4px;
+            background-color: #006600;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        #language-buttons button:hover {
+            background-color: #004d00;
+        }
+        #language-buttons button.active {
+            background-color: #003300;
+        }
+        .lang {
+            display: none;
+        }
+        .lang.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
-  <h1>Exploration</h1>
-<p>He tenido la oportunidad de viajar a lugares increíbles, incluyendo la Antártida.</p>
-<section>
-  <h2>Antártida</h2>
-  <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
-  <p>Fue una experiencia única que amplió mucho mi perspectiva científica y personal.</p>
-</section>
+
+<div id="language-buttons">
+    <button id="btn-es" class="active">ES</button>
+    <button id="btn-en">EN</button>
+</div>
+
+<!-- Contenido en español -->
+<div id="content-es" class="lang active">
+  <h1>Exploración</h1>
+  <p>He tenido la oportunidad de viajar a lugares increíbles, incluyendo la Antártida.</p>
+  <section>
+    <h2>Antártida</h2>
+    <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
+    <p>Fue una experiencia única que amplió mucho mi perspectiva científica y personal.</p>
+  </section>
   <h2>Royal Botanic Gardens Kew</h2>
   <p>Durante 2017, 2018 y 2019 realicé estancias de investigación en los Royal Botanic Gardens, Kew (Reino Unido), trabajando junto al Dr. Daniel Ballesteros y la Dra. Charlotte Seal. 
       Estudiamos la tolerancia a la desecación a largo plazo en esporas clorofílicas de helecho utilizando técnicas como DMTA, análisis de glutatión por HPLC, 
       detección de especies reactivas de oxígeno, cuantificación de pigmentos fotosintéticos, ensayos de germinación y fluorescencia de la clorofila.</p>
   <p>Este trabajo dio lugar a una publicación científica que aporta nuevas perspectivas sobre los mecanismos fisiológicos que permiten la viabilidad de esporas en condiciones extremas 
-      de desecación a lo largo del tiempo<p>
+      de desecación a lo largo del tiempo.</p>
+</div>
+
+<!-- Contenido en inglés -->
+<div id="content-en" class="lang">
+  <h1>Exploration</h1>
+  <p>I have had the opportunity to travel to incredible places, including Antarctica.</p>
+  <section>
+    <h2>Antarctica</h2>
+    <p>In 2018, I participated in a scientific expedition to Antarctica where I studied extremophile plants and extreme environmental conditions.</p>
+    <p>It was a unique experience that greatly expanded my scientific and personal perspective.</p>
+  </section>
+  <h2>Royal Botanic Gardens Kew</h2>
+  <p>During 2017, 2018, and 2019 I conducted research stays at the Royal Botanic Gardens, Kew (UK), working alongside Dr. Daniel Ballesteros and Dr. Charlotte Seal. 
+      We studied long-term desiccation tolerance in chlorophyllous fern spores using techniques such as DMTA, glutathione analysis by HPLC, 
+      detection of reactive oxygen species, quantification of photosynthetic pigments, germination assays, and chlorophyll fluorescence.</p>
+  <p>This work resulted in a scientific publication providing new insights into the physiological mechanisms that allow spore viability under extreme 
+      long-term desiccation conditions.</p>
+</div>
+
+<script>
+    const btnEs = document.getElementById('btn-es');
+    const btnEn = document.getElementById('btn-en');
+    const contentEs = document.getElementById('content-es');
+    const contentEn = document.getElementById('content-en');
+
+    btnEs.addEventListener('click', () => {
+        btnEs.classList.add('active');
+        btnEn.classList.remove('active');
+        contentEs.classList.add('active');
+        contentEn.classList.remove('active');
+    });
+
+    btnEn.addEventListener('click', () => {
+        btnEn.classList.add('active');
+        btnEs.classList.remove('active');
+        contentEn.classList.add('active');
+        contentEs.classList.remove('active');
+    });
+</script>
+
+</body>
+</html>
