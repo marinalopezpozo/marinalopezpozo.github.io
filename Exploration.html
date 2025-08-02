@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
-<title>Viajes - Marina López-Pozo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Viajes / Travels - Marina López-Pozo</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -37,6 +38,30 @@
   .nav-links a:hover {
     text-decoration: underline;
   }
+
+  /* Botones idioma */
+  #language-buttons {
+    margin-left: 20px;
+  }
+  #language-buttons button {
+    font-weight: bold;
+    padding: 0.3em 0.7em;
+    margin-left: 0.3em;
+    border: none;
+    border-radius: 4px;
+    background-color: #006600;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+  }
+  #language-buttons button:hover {
+    background-color: #004d00;
+  }
+  #language-buttons button.active {
+    background-color: #003300;
+  }
+
   section {
     background: white;
     border-radius: 10px;
@@ -51,45 +76,123 @@
   p {
     line-height: 1.5;
   }
+
+  /* Ocultar idiomas según selección */
+  .lang-en {
+    display: none;
+  }
 </style>
 </head>
 <body>
 
 <div class="banner">
-  <h1>Viajes</h1>
+  <div style="display: flex; align-items: center;">
+    <h1 class="lang-es">Viajes</h1>
+    <h1 class="lang-en">Travels</h1>
+  </div>
   <nav class="nav-links">
-    <a href="index.html">Inicio</a>
-    <a href="publicaciones.html">Publicaciones</a>
-    <a href="proyectos.html">Proyectos</a>
+    <a href="index.html" class="lang-es">Inicio</a>
+    <a href="publicaciones.html" class="lang-es">Publicaciones</a>
+    <a href="proyectos.html" class="lang-es">Proyectos</a>
+
+    <a href="index.html" class="lang-en">Home</a>
+    <a href="publicaciones.html" class="lang-en">Publications</a>
+    <a href="proyectos.html" class="lang-en">Projects</a>
+
+    <span id="language-buttons">
+      <button id="btn-es" class="active">ES</button>
+      <button id="btn-en">EN</button>
+    </span>
   </nav>
 </div>
 
-<section>
-  <h2>Antártida</h2>
-  <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
-</section>
+<!-- CONTENIDO EN ESPAÑOL -->
+<div class="lang-es">
+  <section>
+    <h2>Antártida</h2>
+    <p>En 2018, participé en una expedición científica a la Antártida donde estudié plantas extremófilas y condiciones ambientales extremas.</p>
+  </section>
 
-<section>
-  <h2>Royal Botanic Gardens, Kew (Reino Unido)</h2>
-  <p>Durante 2017, 2018 y 2019 realicé estancias de investigación junto al Dr. Daniel Ballesteros y la Dra. Charlotte Seal. Estudiamos la tolerancia a la desecación a largo plazo en esporas clorofílicas de helecho utilizando técnicas como DMTA, análisis de glutatión por HPLC, detección de especies reactivas de oxígeno, cuantificación de pigmentos fotosintéticos, ensayos de germinación y fluorescencia de la clorofila.</p>
-  <p>Este trabajo dio lugar a una publicación científica que aporta nuevas perspectivas sobre los mecanismos fisiológicos que permiten la viabilidad de esporas en condiciones extremas de desecación a lo largo del tiempo.</p>
-</section>
+  <section>
+    <h2>Royal Botanic Gardens, Kew (Reino Unido)</h2>
+    <p>Durante 2017, 2018 y 2019 realicé estancias de investigación junto al Dr. Daniel Ballesteros y la Dra. Charlotte Seal. Estudiamos la tolerancia a la desecación a largo plazo en esporas clorofílicas de helecho utilizando técnicas como DMTA, análisis de glutatión por HPLC, detección de especies reactivas de oxígeno, cuantificación de pigmentos fotosintéticos, ensayos de germinación y fluorescencia de la clorofila.</p>
+    <p>Este trabajo dio lugar a una publicación científica que aporta nuevas perspectivas sobre los mecanismos fisiológicos que permiten la viabilidad de esporas en condiciones extremas de desecación a lo largo del tiempo.</p>
+  </section>
 
-<section>
-  <h2>Universidad de Montevideo, Uruguay</h2>
-  <p>Analicé proteínas LEA, enfocándome en su papel en la tolerancia al estrés en plantas.</p>
-</section>
+  <section>
+    <h2>Universidad de Montevideo, Uruguay</h2>
+    <p>Analicé proteínas LEA, enfocándome en su papel en la tolerancia al estrés en plantas.</p>
+  </section>
 
-<section>
-  <h2>Jardín Botánico de Edimburgo, Reino Unido</h2>
-  <p>Realicé muestreos botánicos para estudiar diversidad y adaptaciones en plantas en diferentes condiciones ambientales.</p>
-</section>
+  <section>
+    <h2>Jardín Botánico de Edimburgo, Reino Unido</h2>
+    <p>Realicé muestreos botánicos para estudiar diversidad y adaptaciones en plantas en diferentes condiciones ambientales.</p>
+  </section>
 
-<section>
-  <h2>Ecotron CRNS, Montpellier, Francia</h2>
-  <p>Participé en experimentos controlados para estudiar respuestas fisiológicas de plantas a condiciones ambientales simuladas.</p>
-</section>
+  <section>
+    <h2>Ecotron CRNS, Montpellier, Francia</h2>
+    <p>Participé en experimentos controlados para estudiar respuestas fisiológicas de plantas a condiciones ambientales simuladas.</p>
+  </section>
+</div>
+
+<!-- CONTENIDO EN INGLÉS -->
+<div class="lang-en">
+  <section>
+    <h2>Antarctica</h2>
+    <p>In 2018, I participated in a scientific expedition to Antarctica studying extremophile plants and extreme environmental conditions.</p>
+  </section>
+
+  <section>
+    <h2>Royal Botanic Gardens, Kew (UK)</h2>
+    <p>During 2017, 2018, and 2019 I conducted research stays alongside Dr. Daniel Ballesteros and Dr. Charlotte Seal. We studied long-term desiccation tolerance in chlorophyllous fern spores using techniques like DMTA, glutathione analysis by HPLC, reactive oxygen species detection, photosynthetic pigment quantification, germination assays, and chlorophyll fluorescence.</p>
+    <p>This work resulted in a scientific publication providing new insights into physiological mechanisms allowing spore viability under extreme desiccation conditions over time.</p>
+  </section>
+
+  <section>
+    <h2>University of Montevideo, Uruguay</h2>
+    <p>I analyzed LEA proteins, focusing on their role in plant stress tolerance.</p>
+  </section>
+
+  <section>
+    <h2>Royal Botanic Garden Edinburgh, UK</h2>
+    <p>I conducted botanical sampling to study plant diversity and adaptations under different environmental conditions.</p>
+  </section>
+
+  <section>
+    <h2>Ecotron CRNS, Montpellier, France</h2>
+    <p>I participated in controlled experiments to study physiological plant responses to simulated environmental conditions.</p>
+  </section>
+</div>
+
+<script>
+  // Función para cambiar idioma
+  const btnES = document.getElementById('btn-es');
+  const btnEN = document.getElementById('btn-en');
+  const langES = document.querySelectorAll('.lang-es');
+  const langEN = document.querySelectorAll('.lang-en');
+
+  function showLanguage(lang) {
+    if(lang === 'es') {
+      langES.forEach(el => el.style.display = '');
+      langEN.forEach(el => el.style.display = 'none');
+      btnES.classList.add('active');
+      btnEN.classList.remove('active');
+    } else {
+      langES.forEach(el => el.style.display = 'none');
+      langEN.forEach(el => el.style.display = '');
+      btnEN.classList.add('active');
+      btnES.classList.remove('active');
+    }
+  }
+
+  btnES.addEventListener('click', () => showLanguage('es'));
+  btnEN.addEventListener('click', () => showLanguage('en'));
+
+  // Por defecto mostramos español
+  showLanguage('es');
+</script>
 
 </body>
 </html>
+
 
