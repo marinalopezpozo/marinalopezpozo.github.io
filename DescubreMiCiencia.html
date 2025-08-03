@@ -1,1 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Descubre mi ciencia - Marina López-Pozo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f7fcff;
+      color: #222;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin-left: 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #006699;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    #language-buttons {
+      margin-bottom: 20px;
+    }
+    #language-buttons button {
+      font-weight: bold;
+      padding: 0.4em 0.8em;
+      margin-left: 0.3em;
+      border: none;
+      border-radius: 4px;
+      background-color: #006600;
+      color: white;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    #language-buttons button:hover {
+      background-color: #004d00;
+    }
+    #language-buttons button.active {
+      background-color: #003300;
+    }
+    h1, h2 {
+      color: #004d99;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .lang-en {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1 class="lang-es">Descubre mi ciencia</h1>
+  <h1 class="lang-en">Discover My Science</h1>
+  <nav>
+    <a href="index.html" class="lang-es">Inicio</a>
+    <a href="index.html" class="lang-en">Home</a>
+  </nav>
+</header>
+
+<div id="language-buttons">
+  <button id="btn-es" class="active" aria-label="Español">ES</button>
+  <button id="btn-en" aria-label="English">EN</button>
+</div>
+
+<!-- Sección 1: Tolerancia a la desecación -->
+<section class="lang-es">
+  <h2>Tolerancia a la desecación</h2>
+  <p>Algunas plantas pueden sobrevivir casi completamente secas. Estudio sus mecanismos moleculares y estructurales para entender cómo se protegen del daño celular cuando pierden casi toda el agua.</p>
+</section>
+<section class="lang-en">
+  <h2>Desiccation Tolerance</h2>
+  <p>Some plants can survive almost completely dry. I study their molecular and structural mechanisms to understand how they protect themselves from cellular damage when they lose nearly all their water.</p>
+</section>
+
+<!-- Sección 2: Zeaxantina -->
+<section class="lang-es">
+  <h2>Zeaxantina y fotoprotección</h2>
+  <p>La zeaxantina es una molécula clave que ayuda a las plantas a disipar el exceso de luz como calor. Analizo cómo se acumula en condiciones extremas para proteger a los organismos fotosintéticos.</p>
+</section>
+<section class="lang-en">
+  <h2>Zeaxanthin and Photoprotection</h2>
+  <p>Zeaxanthin is a key molecule that helps plants dissipate excess light as heat. I analyze how it accumulates under extreme conditions to protect photosynthetic organisms.</p>
+</section>
+
+<!-- Sección 3: Lenteja de agua -->
+<section class="lang-es">
+  <h2>Lenteja de agua en el espacio</h2>
+  <p>Investigo el potencial de <em>Wolffia</em> como cultivo compacto para misiones espaciales, gracias a su crecimiento rápido, alto contenido nutricional y capacidad de reciclaje de CO₂ y O₂.</p>
+</section>
+<section class="lang-en">
+  <h2>Duckweed in Space</h2>
+  <p>I investigate the potential of <em>Wolffia</em> as a compact crop for space missions, due to its rapid growth, high nutritional value, and ability to recycle CO₂ and O₂.</p>
+</section>
+
+<!-- Sección 4: Frío extremo -->
+<section class="lang-es">
+  <h2>Respuesta al frío</h2>
+  <p>He trabajado en ambientes fríos, incluyendo la Antártida, analizando cómo ciertas plantas resisten temperaturas bajo cero sin perder funcionalidad fotosintética.</p>
+</section>
+<section class="lang-en">
+  <h2>Cold Tolerance</h2>
+  <p>I have worked in cold environments, including Antarctica, analyzing how certain plants withstand subzero temperatures without losing photosynthetic function.</p>
+</section>
+
+<!-- Sección 5: Radiación UV -->
+<section class="lang-es">
+  <h2>Radiación ultravioleta</h2>
+  <p>Simulo condiciones de radiación UV similares a las del espacio exterior para estudiar cómo afectan a las plantas y qué mecanismos antioxidantes se activan.</p>
+</section>
+<section class="lang-en">
+  <h2>Ultraviolet Radiation</h2>
+  <p>I simulate UV radiation conditions similar to outer space to study how they affect plants and which antioxidant mechanisms are activated.</p>
+</section>
+
+<!-- Sección 6: Nutrición humana -->
+<section class="lang-es">
+  <h2>Nutrición humana</h2>
+  <p>Además del interés ecológico, estudio el valor nutricional de ciertas plantas para mejorar dietas humanas, tanto en la Tierra como en futuras colonias espaciales.</p>
+</section>
+<section class="lang-en">
+  <h2>Human Nutrition</h2>
+  <p>In addition to ecological interest, I study the nutritional value of certain plants to improve human diets both on Earth and in future space colonies.</p>
+</section>
+
+<script>
+  const btnEs = document.getElementById('btn-es');
+  const btnEn = document.getElementById('btn-en');
+  const langES = document.querySelectorAll('.lang-es');
+  const langEN = document.querySelectorAll('.lang-en');
+
+  function showLanguage(lang) {
+    if (lang === 'es') {
+      langES.forEach(el => el.style.display = '');
+      langEN.forEach(el => el.style.display = 'none');
+      btnEs.classList.add('active');
+      btnEn.classList.remove('active');
+    } else {
+      langES.forEach(el => el.style.display = 'none');
+      langEN.forEach(el => el.style.display = '');
+      btnEn.classList.add('active');
+      btnEs.classList.remove('active');
+    }
+  }
+
+  btnEs.addEventListener('click', () => showLanguage('es'));
+  btnEn.addEventListener('click', () => showLanguage('en'));
+
+  showLanguage('es');
+</script>
+
+</body>
+</html>
 
