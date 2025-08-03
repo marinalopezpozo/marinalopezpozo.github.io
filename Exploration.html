@@ -5,98 +5,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Viajes / Travels - Marina López-Pozo</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', sans-serif;
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    background: #f0f4f3;
+    background: linear-gradient(160deg, #e8f5ec, #fff7ea);
     color: #2e3a33;
   }
+
   /* Banner superior */
   .banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #a7c4a0; /* verde pastel */
-    color: #1f2d1f;
+    background: linear-gradient(90deg, #8DC1A4, #A7D2B4);
+    color: #1e2d26;
     padding: 15px 20px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 30px;
     font-weight: 600;
     font-size: 1.6em;
-    box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   }
+
   .banner h1 {
     margin: 0;
   }
+
   .nav-links a {
-    color: #1f2d1f;
+    color: #1e2d26;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 600;
     font-size: 1em;
     transition: color 0.3s ease;
   }
+
   .nav-links a:hover {
-    color: #568259;
+    color: #33785e;
     text-decoration: underline;
   }
 
-  /* Botones idioma */
   #language-buttons {
     margin-left: 20px;
   }
+
   #language-buttons button {
     font-weight: 600;
     padding: 0.4em 0.9em;
     margin-left: 0.4em;
     border: none;
     border-radius: 5px;
-    background-color: #568259;
+    background-color: #33785e;
     color: white;
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease;
-    box-shadow: 0 2px 5px rgba(86,130,89,0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
+
   #language-buttons button:hover {
-    background-color: #3b5a36;
+    background-color: #1f5a45;
   }
+
   #language-buttons button.active {
-    background-color: #2d4528;
-    box-shadow: 0 2px 8px rgba(45,69,40,0.7);
+    background-color: #164e3a;
+    box-shadow: 0 2px 8px rgba(22,78,58,0.6);
   }
 
   section {
     background: white;
-    border-radius: 12px;
-    padding: 22px;
-    margin-bottom: 24px;
-    box-shadow: 0 7px 17px rgba(0,0,0,0.07);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 26px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.06);
   }
+
   h2 {
-    color: #4a6a4d;
+    color: #27664e;
     margin-top: 0;
+    font-weight: 700;
   }
+
   p {
     line-height: 1.6;
     font-size: 1.1em;
+    margin: 0.5em 0;
   }
 
   /* Estilo para sección con imagen a la izquierda */
   .section-with-image {
     display: flex;
     align-items: flex-start;
-    gap: 18px;
+    gap: 20px;
   }
+
   .section-with-image img {
     max-width: 210px;
     border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   }
+
   .section-with-image .text-content {
     flex: 1;
   }
@@ -222,7 +236,7 @@
   btnES.addEventListener('click', () => showLanguage('es'));
   btnEN.addEventListener('click', () => showLanguage('en'));
 
-  // Por defecto mostramos español
+  // Idioma por defecto
   showLanguage('es');
 </script>
 
